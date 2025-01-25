@@ -2,6 +2,8 @@ import { getOrganizationRepositories } from './get-org-repository'
 import { getRepositoryContributors } from './repo-collaborators'
 import type { Contributor, LeaderboardItem } from './types'
 
+const BOT_USERS = ['turbobot-temp', 'dependabot[bot]']
+
 export async function getCollaboratorsLeaderBoard(): Promise<
   LeaderboardItem[]
 > {
@@ -20,6 +22,10 @@ export async function getCollaboratorsLeaderBoard(): Promise<
         const leaderboardItem = currentLeaderboard.get(contributor.login)
         const currentContributions = leaderboardItem?.totalContributions ?? 0
 
+        if (BOT_USERS.includes(contributor.login)) {
+          return currentLeaderboard
+        }
+
         currentLeaderboard.set(contributor.login, {
           ...contributor,
           totalContributions: currentContributions + contributor.contributions,
@@ -30,13 +36,10 @@ export async function getCollaboratorsLeaderBoard(): Promise<
       new Map<string, LeaderboardItem>(),
     )
 
-    return contributors
-      .values()
-      .toArray()
-      .sort(
-        (aContributor, bContributor) =>
-          bContributor.totalContributions - aContributor.totalContributions,
-      )
+    return [...contributors.values()].sort(
+      (aContributor, bContributor) =>
+        bContributor.totalContributions - aContributor.totalContributions,
+    )
   } catch (error) {
     console.error(error)
     return []
