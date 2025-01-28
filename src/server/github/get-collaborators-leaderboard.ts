@@ -45,3 +45,4 @@ export async function getCollaboratorsLeaderBoard(): Promise<
     return []
   }
 }
+export { getOrganizationRepositories }

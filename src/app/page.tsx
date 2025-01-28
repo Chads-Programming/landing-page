@@ -1,9 +1,17 @@
 import { ColaboratorsSection } from './sections/colaborators-section'
+import { HeroSection } from './sections/hero-section'
+import { ProjectsSection } from './sections/projects-section'
+import { Sponsorsection } from './sections/sponsor-section'
+import { TestimonialsSection } from './sections/testimonials-section'
 
-export default function Home() {
+export default function DiscordLanding() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen bg-gradient-to-b from-black via-[#0A0B1E] to-black">
+      <HeroSection />
+      <ProjectsSection />
       <ColaboratorsSection />
+      <TestimonialsSection />
+      <Sponsorsection />
     </div>
   )
 }

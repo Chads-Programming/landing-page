@@ -1,9 +1,21 @@
-export interface Repository {
+export interface RawRepository {
   name: string
   full_name: string
   html_url: string
   description?: string
   stargazers_count: number
+  languages_url: string
+  url: string
+}
+
+export interface Repository {
+  name: string
+  fullname: string
+  htmlUrl: string
+  description?: string
+  stargazersCount: number
+  languages: string[]
+  url: string
 }
 
 export interface Contributor {
