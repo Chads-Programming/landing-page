@@ -12,13 +12,21 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-export const metadata: Metadata = {
-  title: 'Chads programming',
-  description: `Join our 24/7 active community of passionate developers and tech
+const title = 'Chads programming';
+const description = `Join our 24/7 active community of passionate developers and tech
               enthusiasts. Share knowledge, collaborate on projects, and grow
-              together.`,
+              together.`;
+
+export const metadata: Metadata = {
+  title,
+  description,
+  themeColor: "black",
   openGraph: {
-    images: ['/chadprogamming.png'],
+    title,
+    description,
+    images: ['/chadprogramming.webp'],
+    type: "website",
+    siteName: "Chads Programming",
   },
 }
 
