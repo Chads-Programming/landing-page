@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -12,22 +12,25 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-const title = 'Chads programming';
+const title = 'Chads programming'
 const description = `Join our 24/7 active community of passionate developers and tech
               enthusiasts. Share knowledge, collaborate on projects, and grow
-              together.`;
+              together.`
 
 export const metadata: Metadata = {
   title,
   description,
-  themeColor: "black",
   openGraph: {
     title,
     description,
     images: ['/chadprogramming.webp'],
-    type: "website",
-    siteName: "Chads Programming",
+    type: 'website',
+    siteName: 'Chads Programming',
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: 'black',
 }
 
 export default function RootLayout({
