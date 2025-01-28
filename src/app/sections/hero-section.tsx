@@ -18,18 +18,18 @@ export const HeroSection = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.2, ease: 'easeOut' }}
     >
-      <div className="container px-4 mx-auto relative z-20 flex justify-between">
-        <div className="flex flex-col items-start justify-center min-h-[90vh] max-w-3xl pb-20">
+      <div className="container px-4 mx-auto relative z-20 flex flex-wrap md:flex-nowrap justify-center md:justify-between pb-20 md:pb-0 gap-10">
+        <div className="flex flex-col items-start justify-center md:min-h-[90vh] max-w-3xl md:pb-20">
           <motion.div
             className="relative py-8 before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/20 before:via-blue-500/20 before:to-purple-500/20 before:blur-3xl before:-z-10"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6 [text-shadow:_0_2px_10px_rgb(139_92_246_/_20%)]">
-              CHADS PROGRAMMING
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6 [text-shadow:_0_2px_10px_rgb(139_92_246_/_20%)] uppercase">
+              Chads Programming
               <br />
-              COMMUNITY HUB
+              Community Hub
             </h1>
             <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-2xl">
               Join our 24/7 active community of passionate developers and tech
