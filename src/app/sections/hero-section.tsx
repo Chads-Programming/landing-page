@@ -55,7 +55,7 @@ export const HeroSection = () => {
           </motion.div>
         </div>
         <Image
-          src="/chadprogramming.png"
+          src="/chadprogramming.webp"
           width={256}
           height={256}
           alt="community logo"
