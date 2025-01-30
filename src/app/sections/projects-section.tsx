@@ -7,12 +7,18 @@ import { getOrganizationRepositories } from '@/server/github/get-org-repository'
 import { Star } from 'lucide-react'
 import Link from 'next/link'
 
+const MIN_STARS = 3
+
 export const ProjectsSection = async () => {
   const projects = await getOrganizationRepositories()
-    .then((repos) => repos.filter((repo) => repo.stargazersCount >= 2))
+    .then((repos) =>
+      repos.filter(
+        (repo) => repo.stargazersCount >= MIN_STARS && !repo.archived,
+      ),
+    )
     .then((repos) =>
       repos.sort(
-        (aRepo, bRepo) => bRepo.stargazersCount - aRepo.stargazersCount,
+        (aRepo, bRepo) => aRepo.stargazersCount - bRepo.stargazersCount,
       ),
     )
 
@@ -27,7 +33,7 @@ export const ProjectsSection = async () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
             <AnimateInView key={project.name} delay={i * 0.1}>
-              <Link key={project.name} href={project.url} target="_blank">
+              <Link key={project.name} href={project.htmlUrl} target="_blank">
                 <SpotlightCard>
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {project.name}
