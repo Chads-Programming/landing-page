@@ -2,7 +2,6 @@ import Image from 'next/image'
 
 import { AnimateInView } from '@/components/animate-in-view'
 import { SectionHeading } from '@/components/section-heading'
-import { SpotlightCard } from '@/components/spotlight-card'
 import sponsors from '@/sponsors'
 import Link from 'next/link'
 
@@ -22,20 +21,18 @@ export const Sponsorsection = () => {
           {sponsors.map((sponsor, i) => (
             <AnimateInView key={sponsor.name} delay={i * 0.1}>
               <Link href={sponsor.url} target="_blank">
-                <SpotlightCard>
-                  <div className="w-full h-14 rounded-lg flex items-center justify-center p-4 transition-all group">
-                    <Image
-                      src={sponsor.imageUrl}
-                      alt={sponsor.name}
-                      width={64}
-                      height={65}
-                      className="opacity-50 rounded-full group-hover:opacity-100 transition-opacity"
-                    />
-                    <span className="text-pretty ml-2 text-sm font-semibold text-white">
-                      {sponsor.name}
-                    </span>
-                  </div>
-                </SpotlightCard>
+                <div className="w-full h-14 rounded-lg flex items-center justify-center p-4 transition-all group">
+                  <Image
+                    src={sponsor.imageUrl}
+                    alt={sponsor.name}
+                    width={64}
+                    height={65}
+                    className="opacity-50 rounded-full group-hover:opacity-100 transition-opacity"
+                  />
+                  <span className="text-pretty ml-2 text-sm font-semibold text-white">
+                    {sponsor.name}
+                  </span>
+                </div>
               </Link>
             </AnimateInView>
           ))}

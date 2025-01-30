@@ -1,4 +1,4 @@
-'use client'
+'use server'
 import { AnimateInView } from '@/components/animate-in-view'
 import { SectionHeading } from '@/components/section-heading'
 import { SpotlightCard } from '@/components/spotlight-card'
@@ -6,7 +6,7 @@ import testimonials from '@/testimonials'
 import { MessageSquare } from 'lucide-react'
 import Image from 'next/image'
 
-export const TestimonialsSection = () => {
+export const TestimonialsSection = async () => {
   return (
     <section className="py-20 relative overflow-hidden bg-transparent">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0A0B1E] via-[#070812] to-black opacity-90" />

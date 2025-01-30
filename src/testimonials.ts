@@ -1,18 +1,18 @@
 export default [
   {
-    text: 'This community has been instrumental in my growth as a developer. The support and knowledge sharing is incredible.',
+    text: 'I found my first dev job through connections made in this community. The mentorship program is fantastic!',
     author: 'Pablo Bartolomé Gallardo',
-    role: 'Senior Developer at Microsoft',
+    role: 'Software Developer',
     image: 'https://avatars.githubusercontent.com/u/121761009?v=4',
   },
   {
-    text: 'I found my first dev job through connections made in this community. The mentorship program is fantastic!',
+    text: ' The collaborative projects helped me build a strong portfolio. This community is a game-changer for developers.',
     author: 'Daniele Sileoni',
-    role: 'Full stack developer',
+    role: 'Freelance developer',
     image: 'https://avatars.githubusercontent.com/u/108042581?v=4',
   },
   {
-    text: 'The collaborative projects helped me build a strong portfolio. This community is a game-changer for developers.',
+    text: 'This community has been instrumental in my growth as a developer. The support and knowledge sharing is incredible.',
     author: 'Arturo Artaza',
     role: 'Full stack developer',
     image:

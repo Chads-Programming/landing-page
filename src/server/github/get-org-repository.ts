@@ -7,7 +7,7 @@ export async function getOrganizationRepositories(): Promise<Repository[]> {
     const response = await githubApi.get(`/orgs/${GITHUB_ORG_NAME}/repos`)
 
     const responseQuery = response.data
-      .filter((repo: RawRepository) => repo.stargazers_count >= 2)
+      .filter((repo: RawRepository) => repo.stargazers_count)
       .map(async (repo: RawRepository) => {
         const langResponse = await fetch(repo.languages_url)
         const langs = await langResponse.json().then(Object.keys)
