@@ -6,6 +6,7 @@ export interface RawRepository {
   stargazers_count: number
   languages_url: string
   url: string
+  archived: boolean
 }
 
 export interface Repository {
@@ -16,6 +17,7 @@ export interface Repository {
   stargazersCount: number
   languages: string[]
   url: string
+  archived: boolean
 }
 
 export interface Contributor {

@@ -15,12 +15,13 @@ export async function getOrganizationRepositories(): Promise<Repository[]> {
         return {
           name: repo.name,
           fullname: repo.full_name,
-          htmlurl: repo.html_url,
+          htmlUrl: repo.html_url,
           description: repo.description,
           stargazersCount: repo.stargazers_count,
           languages: langs,
           url: repo.url,
-        }
+          archived: repo.archived,
+        } as Repository
       })
 
     return Promise.all(responseQuery)
