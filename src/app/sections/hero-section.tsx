@@ -1,6 +1,8 @@
 'use client'
 
+import { TextAnimatedGradient } from '@/components/text-animated'
 import { motion } from 'framer-motion'
+import { Users } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -18,16 +20,24 @@ export const HeroSection = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.2, ease: 'easeOut' }}
     >
-      <div className="container px-4 mx-auto relative z-20 flex flex-wrap md:flex-nowrap justify-center md:justify-between pb-20 md:pb-0 gap-10">
-        <div className="flex flex-col items-start justify-center md:min-h-[90vh] max-w-3xl md:pb-20">
+      <div className="container w-full px-4 mx-auto relative z-20 flex flex-wrap md:flex-nowrap justify-center">
+        <div className="flex flex-col items-center justify-center min-h-screen">
+          <Image
+            src="/chadprogramming.webp"
+            width={256}
+            height={256}
+            alt="community logo"
+            className="rounded-full self-center"
+            draggable={false}
+          />
           <motion.div
             className="relative py-8 before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/20 before:via-blue-500/20 before:to-purple-500/20 before:blur-3xl before:-z-10"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6 [text-shadow:_0_2px_10px_rgb(139_92_246_/_20%)] uppercase">
-              Chads Programming
+            <h1 className="text-4xl md:text-6xl font-bold text-center tracking-tighter text-white mb-6 [text-shadow:_0_2px_10px_rgb(139_92_246_/_20%)] uppercase">
+              Chads <TextAnimatedGradient>Programming</TextAnimatedGradient>
               <br />
               Community Hub
             </h1>
@@ -36,7 +46,7 @@ export const HeroSection = () => {
               enthusiasts. Share knowledge, collaborate on projects, and grow
               together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="https://discord.gg/FSKeeDhMNN" target="_blank">
                 {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
                 <button className="text-lg relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50">
@@ -47,25 +57,18 @@ export const HeroSection = () => {
                 </button>
               </Link>
 
-              <div className="text-zinc-500 flex items-center">
-                <span className="mr-2">•</span>
-                Already have {'>'}100 members
+              <div className="flex items-center gap-2 text-sm text-gray-400">
+                <Users className="h-4 w-4" />
+                <span>Already have &gt;100 members</span>
               </div>
             </div>
           </motion.div>
         </div>
-        <Image
-          src="/chadprogramming.webp"
-          width={256}
-          height={256}
-          alt="community logo"
-          className="rounded-full self-center"
-        />
       </div>
 
       {/* Decorative Elements */}
       <motion.div
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 aspect-square"
+        className="absolute right-1/2 top-[20%] -translate-y-1/2 w-1/2 aspect-square"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.5 }}

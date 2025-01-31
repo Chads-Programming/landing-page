@@ -12,6 +12,7 @@ export default {
       animation: {
         'border-width': 'border-width 3s infinite alternate',
         'background-shine': 'background-shine 2s linear infinite',
+        'text-gradient': 'text-gradient 1.5s linear infinite',
       },
       keyframes: {
         'border-width': {
@@ -30,6 +31,11 @@ export default {
           },
           to: {
             backgroundPosition: '-200% 0',
+          },
+        },
+        'text-gradient': {
+          to: {
+            backgroundPosition: '200% center',
           },
         },
       },

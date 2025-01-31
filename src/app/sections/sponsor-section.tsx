@@ -27,7 +27,7 @@ export const Sponsorsection = () => {
                     alt={sponsor.name}
                     width={64}
                     height={65}
-                    className="opacity-50 rounded-full group-hover:opacity-100 transition-opacity"
+                    className="opacity-50 rounded-full group-hover:opacity-100 transition-opacity grayscale"
                   />
                   <span className="text-pretty ml-2 text-sm font-semibold text-white">
                     {sponsor.name}
