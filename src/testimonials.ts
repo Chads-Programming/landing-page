@@ -33,7 +33,7 @@ export default [
   {
     text: `Joining to this community, I have connected with amazing friends who guided me, helped improve my projects, and made me a better programmer. I wouldn't be where I am without them!`,
     author: 'Ian Espinillo',
-    role: 'Software engineer student',
+    role: 'Software engineering student',
     image: '/ian.jpg',
   },
 ]
