@@ -11,7 +11,7 @@ export default [
   },
   {
     name: 'Atrowik',
-    imageUrl: '/atrowik.jpeg',
+    imageUrl: '/atrowik.webp',
     url: 'https://www.atrowik.com/',
   },
 ]
