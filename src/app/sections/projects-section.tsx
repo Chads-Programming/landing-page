@@ -2,6 +2,7 @@
 
 import { AnimateInView } from '@/components/animate-in-view'
 import { AnimatedHeading } from '@/components/animated-heading'
+import { LangIcon } from '@/components/lang-icon'
 import { SpotlightCard } from '@/components/spotlight-card'
 import { getOrganizationRepositories } from '@/server/github/get-org-repository'
 import { Star } from 'lucide-react'
@@ -39,14 +40,11 @@ export const ProjectsSection = async () => {
                     {project.name}
                   </h3>
                   <p className="text-zinc-400 mb-4">{project.description}</p>
-                  <div className="text-sm text-zinc-500">
+                  <div className="text-sm text-zinc-500 inline-flex flex-wrap gap-2 items-center">
                     {project.languages.map((lang) => (
-                      <span
-                        className="px-2"
-                        key={`${project.fullname}-${lang}`}
-                      >
-                        {lang}
-                      </span>
+                      <div className="px-2" key={`${project.fullname}-${lang}`}>
+                        <LangIcon lang={lang} />
+                      </div>
                     ))}
                   </div>
                   <div className="flex items-center gap-4 mt-4 pt-4 border-t border-zinc-800">
