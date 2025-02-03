@@ -1,6 +1,6 @@
 export default [
   {
-    text: ' The collaborative projects helped me build a strong portfolio. This community is a game-changer for developers.',
+    text: 'The collaborative projects helped me build a strong portfolio. This community is a game-changer for developers.',
     author: 'Daniele Sileoni',
     role: 'Freelance developer',
     image: 'https://avatars.githubusercontent.com/u/108042581?v=4',
