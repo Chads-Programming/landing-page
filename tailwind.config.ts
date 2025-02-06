@@ -13,6 +13,7 @@ export default {
         'border-width': 'border-width 3s infinite alternate',
         'background-shine': 'background-shine 2s linear infinite',
         'text-gradient': 'text-gradient 1.5s linear infinite',
+        orbit: 'orbit calc(var(--duration)*1s) linear infinite',
       },
       keyframes: {
         'border-width': {
@@ -36,6 +37,16 @@ export default {
         'text-gradient': {
           to: {
             backgroundPosition: '200% center',
+          },
+        },
+        orbit: {
+          '0%': {
+            transform:
+              'rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))',
+          },
+          '100%': {
+            transform:
+              'rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))',
           },
         },
       },
