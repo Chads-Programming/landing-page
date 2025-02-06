@@ -1,15 +1,13 @@
-'use client'
-
+import { MembersMosaic } from '@/components/members-mosaic'
 import { TextAnimatedGradient } from '@/components/text-animated'
 import { Discord } from '@/icons/discord'
-import { motion } from 'framer-motion'
 import { Users } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export const HeroSection = () => {
   return (
-    <motion.div
+    <div
       className="relative overflow-hidden bg-gradient-to-b from-black via-[#070812] to-[#0A0B1E]"
       style={{
         backgroundImage: `
@@ -17,11 +15,8 @@ export const HeroSection = () => {
         linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(10, 11, 30, 1))
       `,
       }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.2, ease: 'easeOut' }}
     >
-      <div className="container w-full px-4 mx-auto relative z-20 flex flex-wrap md:flex-nowrap justify-center">
+      <div className="container w-full px-4 mx-auto relative z-20 flex flex-wrap md:flex-nowrap justify-center items-center">
         <div className="flex flex-col items-center justify-center min-h-screen">
           <Image
             src="/chadprogramming.webp"
@@ -31,12 +26,7 @@ export const HeroSection = () => {
             className="rounded-full self-center"
             draggable={false}
           />
-          <motion.div
-            className="relative py-8 before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/20 before:via-blue-500/20 before:to-purple-500/20 before:blur-3xl before:-z-10"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <div className="relative py-8 before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/20 before:via-blue-500/20 before:to-purple-500/20 before:blur-3xl before:-z-10">
             <h1 className="text-4xl md:text-6xl font-bold text-center tracking-tighter text-white mb-6 [text-shadow:_0_2px_10px_rgb(139_92_246_/_20%)] uppercase">
               Chads <TextAnimatedGradient>Programming</TextAnimatedGradient>
               <br />
@@ -63,21 +53,17 @@ export const HeroSection = () => {
                 <span>Already have &gt;100 members</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
+        <MembersMosaic />
       </div>
 
       {/* Decorative Elements */}
-      <motion.div
-        className="absolute right-1/2 top-[20%] -translate-y-1/2 w-1/2 aspect-square"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
+      <div className="absolute right-1/2 top-[20%] -translate-y-1/2 w-1/2 aspect-square">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-purple-500/20 blur-2xl" />
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-purple-500/20 blur-3xl rotate-45" />
-      </motion.div>
+      </div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A0B1E] to-transparent" />
-    </motion.div>
+    </div>
   )
 }
