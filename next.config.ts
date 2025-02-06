@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
       {
         hostname: 'media.licdn.com',
       },
+      {
+        hostname: 'cdn.discordapp.com',
+      },
     ],
   },
 }
