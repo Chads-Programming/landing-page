@@ -1,6 +1,6 @@
-import axios from 'axios'
+import * as http from '@/lib/http'
 
-export const githubApi = axios.create({
+export const githubApi = http.create({
   baseURL: 'https://api.github.com',
   headers: {
     Authorization: `token ${process.env.GITHUB_TOKEN}`,

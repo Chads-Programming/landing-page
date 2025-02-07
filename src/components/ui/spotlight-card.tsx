@@ -50,7 +50,7 @@ export const SpotlightCard: React.FC<PropsWithChildren> = ({ children }) => {
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(139, 92, 246, 0.15), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(34, 197, 94, 0.15), transparent 40%)`,
         }}
       />
       <div className="absolute inset-0 rounded-xl transition duration-300 opacity-0 group-hover:opacity-100" />

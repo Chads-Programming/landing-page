@@ -1,7 +1,7 @@
 'use server'
 
-import { AnimateInView } from '@/components/animate-in-view'
-import { AnimatedHeading } from '@/components/animated-heading'
+import { AnimateInView } from '@/components/ui/animate-in-view'
+import { AnimatedHeading } from '@/components/ui/animated-heading'
 import { getCollaboratorsLeaderBoard } from '@/server/github/get-collaborators-leaderboard'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,7 +10,7 @@ export const ColaboratorsSection = async () => {
 
   return (
     <section className="py-20 relative overflow-hidden bg-transparent">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0B1E] via-[#070812] to-black opacity-90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#11111b] to-black opacity-90" />
       <div className="container px-4 mx-auto relative z-20">
         <AnimatedHeading
           title="Notable Members"
@@ -27,7 +27,7 @@ export const ColaboratorsSection = async () => {
                 <div className="flex h-full items-center justify-center rounded-md border border-transparent group-hover:border-solid group-hover:border-zinc-800/40">
                   <Link href={member.html_url} target="_blank">
                     <article className="text-center p-6 group relative overflow-hidden">
-                      <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gray-600 group-hover:bg-gradient-to-br from-purple-500 to-blue-500 p-1 transition-all ease-in">
+                      <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gray-600 group-hover:bg-gradient-to-br from-green-400 to-purple-800 p-1 transition-all ease-in">
                         <div className="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center">
                           <Image
                             src={member.avatar_url}

@@ -1,9 +1,9 @@
 'use server'
 
-import { AnimateInView } from '@/components/animate-in-view'
-import { AnimatedHeading } from '@/components/animated-heading'
-import { LangIcon } from '@/components/lang-icon'
-import { SpotlightCard } from '@/components/spotlight-card'
+import { AnimateInView } from '@/components/ui/animate-in-view'
+import { AnimatedHeading } from '@/components/ui/animated-heading'
+import { LangIcon } from '@/components/ui/lang-icon'
+import { SpotlightCard } from '@/components/ui/spotlight-card'
 import { getOrganizationRepositories } from '@/server/github/get-org-repository'
 import { Star } from 'lucide-react'
 import Link from 'next/link'
@@ -25,7 +25,7 @@ export const ProjectsSection = async () => {
 
   return (
     <section className="py-20 relative overflow-hidden bg-transparent">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0B1E] via-[#070812] to-black opacity-90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#11111b] to-black opacity-90" />
       <div className="container px-4 mx-auto relative z-20">
         <AnimatedHeading
           title="Featured Projects"

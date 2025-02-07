@@ -4,7 +4,9 @@ import type { RawRepository, Repository } from './types'
 
 export async function getOrganizationRepositories(): Promise<Repository[]> {
   try {
-    const response = await githubApi.get(`/orgs/${GITHUB_ORG_NAME}/repos`)
+    const response = await githubApi.get<RawRepository[]>(
+      `/orgs/${GITHUB_ORG_NAME}/repos`,
+    )
 
     const responseQuery = response.data
       .filter((repo: RawRepository) => repo.stargazers_count)
