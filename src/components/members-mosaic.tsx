@@ -1,5 +1,3 @@
-'use server'
-
 import {
   CONSPIRADOR_ROLE,
   DISCORD_BASE_IMAGE_URL,
@@ -19,12 +17,7 @@ const filterOnlyGigachadMembers = (members: DiscordMember[]) =>
     )
   })
 
-interface MembersMosaicProps extends React.ComponentProps<'div'> {}
-
-export const MembersMosaic = async ({
-  className,
-  ...props
-}: MembersMosaicProps) => {
+export const MembersMosaic = async () => {
   const members = await getServerMembers({ limit: MAX_LIMIT }).then(
     filterOnlyGigachadMembers,
   )
