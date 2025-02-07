@@ -1,3 +1,5 @@
+'use server'
+
 import {
   CONSPIRADOR_ROLE,
   DISCORD_BASE_IMAGE_URL,
