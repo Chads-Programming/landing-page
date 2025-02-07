@@ -1,7 +1,7 @@
 'use server'
-import { AnimateInView } from '@/components/animate-in-view'
-import { SectionHeading } from '@/components/section-heading'
-import { SpotlightCard } from '@/components/spotlight-card'
+import { AnimateInView } from '@/components/ui/animate-in-view'
+import { SectionHeading } from '@/components/ui/section-heading'
+import { SpotlightCard } from '@/components/ui/spotlight-card'
 import testimonials from '@/testimonials'
 import { MessageSquare } from 'lucide-react'
 import Image from 'next/image'
@@ -9,7 +9,7 @@ import Image from 'next/image'
 export const TestimonialsSection = async () => {
   return (
     <section className="py-20 relative overflow-hidden bg-transparent">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0B1E] via-[#070812] to-black opacity-90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#11111b] to-black opacity-90" />
       <div className="container px-4 mx-auto relative z-20">
         <AnimateInView>
           <SectionHeading
@@ -24,7 +24,7 @@ export const TestimonialsSection = async () => {
               <SpotlightCard>
                 <div className="flex items-start gap-4 mb-4">
                   <div className="relative flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 p-[2px]">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-purple-800  p-[2px]">
                       <div className="w-full h-full rounded-full overflow-hidden">
                         <Image
                           src={testimonial.image || '/placeholder.svg'}

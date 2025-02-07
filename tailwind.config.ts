@@ -14,8 +14,13 @@ export default {
         'background-shine': 'background-shine 2s linear infinite',
         'text-gradient': 'text-gradient 1.5s linear infinite',
         orbit: 'orbit calc(var(--duration)*1s) linear infinite',
+        grid: 'grid 15s linear infinite',
       },
       keyframes: {
+        grid: {
+          '0%': { transform: 'translateY(-50%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
         'border-width': {
           from: {
             width: '10px',

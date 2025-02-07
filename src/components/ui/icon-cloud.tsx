@@ -19,7 +19,7 @@ interface IconCloudProps {
 }
 
 function easeOutCubic(t: number): number {
-  return 1 - Math.pow(1 - t, 3)
+  return 1 - (1 - t) ** 3
 }
 
 export function IconCloud({ icons, images }: IconCloudProps) {
@@ -38,7 +38,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
     startTime: number
     duration: number
   } | null>(null)
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number>(0)
   const rotationRef = useRef(rotation)
   const iconCanvasesRef = useRef<HTMLCanvasElement[]>([])
   const imagesLoadedRef = useRef<boolean[]>([])
@@ -81,7 +81,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
           offCtx.scale(0.4, 0.4)
           const svgString = renderToString(item as React.ReactElement)
           const img = new Image()
-          img.src = 'data:image/svg+xml;base64,' + btoa(svgString)
+          img.src = `data:image/svg+xml;base64,${btoa(svgString)}`
           img.onload = () => {
             offCtx.clearRect(0, 0, offscreen.width, offscreen.height)
             offCtx.drawImage(img, 0, 0)
@@ -136,7 +136,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
     const ctx = canvasRef.current.getContext('2d')
     if (!ctx) return
 
-    iconPositions.forEach((icon) => {
+    for (const icon of iconPositions) {
       const cosX = Math.cos(rotationRef.current.x)
       const sinX = Math.sin(rotationRef.current.x)
       const cosY = Math.cos(rotationRef.current.y)
@@ -146,7 +146,9 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       const rotatedZ = icon.x * sinY + icon.z * cosY
       const rotatedY = icon.y * cosX + rotatedZ * sinX
 
+      // biome-ignore lint/style/noNonNullAssertion: never null
       const screenX = canvasRef.current!.width / 2 + rotatedX
+      // biome-ignore lint/style/noNonNullAssertion: never null
       const screenY = canvasRef.current!.height / 2 + rotatedY
 
       const scale = (rotatedZ + 200) / 300
@@ -164,7 +166,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
         const currentX = rotationRef.current.x
         const currentY = rotationRef.current.y
         const distance = Math.sqrt(
-          Math.pow(targetX - currentX, 2) + Math.pow(targetY - currentY, 2),
+          (targetX - currentX) ** 2 + (targetY - currentY) ** 2,
         )
 
         const duration = Math.min(2000, Math.max(800, distance * 1000))
@@ -180,7 +182,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
         })
         return
       }
-    })
+    }
 
     setIsDragging(true)
     setLastMousePos({ x: e.clientX, y: e.clientY })
