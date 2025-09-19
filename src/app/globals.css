@@ -86,3 +86,15 @@ body {
 .bg-primary-gradient {
   @apply bg-gradient-to-r from-green-600 via-green-400 to-green-600;
 }
+
+.prism-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.prismatic-burst-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

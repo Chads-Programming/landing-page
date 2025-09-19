@@ -1,6 +1,6 @@
 import { MembersMosaic } from '@/components/members-mosaic'
 import { LinkButton } from '@/components/ui/link-button'
-import { RetroGrid } from '@/components/ui/retro-grid'
+import Prism from '@/components/ui/prism'
 import { TextAnimatedGradient } from '@/components/ui/text-animated'
 import { Discord } from '@/icons/discord'
 import { Github } from '@/icons/github'
@@ -56,7 +56,20 @@ export const HeroSection = () => {
         </div>
         <MembersMosaic />
       </div>
-      <RetroGrid />
+      <div className="absolute w-full h-full">
+        <Prism
+          animationType="rotate3d"
+          intensity={2}
+          speed={0.5}
+          distort={1.0}
+          paused={false}
+          offset={{ x: 0, y: 0 }}
+          hoverDampness={0.25}
+          rayCount={24}
+          mixBlendMode="lighten"
+          colors={['#16a34a', '#4d3dff', '#ffffff']}
+        />
+      </div>
     </div>
   )
 }
