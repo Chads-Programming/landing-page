@@ -1,4 +1,3 @@
-import { MembersMosaic } from '@/components/members-mosaic'
 import { LinkButton } from '@/components/ui/link-button'
 import { RetroGrid } from '@/components/ui/retro-grid'
 import { TextAnimatedGradient } from '@/components/ui/text-animated'
@@ -36,7 +35,7 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-        <MembersMosaic />
+        {/* <MembersMosaic /> */}
       </div>
       <div className="absolute w-full h-full">
         <RetroGrid />
