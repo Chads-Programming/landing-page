@@ -42,7 +42,7 @@ export const ProjectsSection = async () => {
                   <div className="text-sm text-zinc-500 inline-flex flex-wrap gap-2 items-center">
                     {project.languages.map((lang) => (
                       <div
-                        className="font-mono text-xs py-1 px-2 rounded-lg bg-secondary/50 hover:bg-secondary border border-gray-600 text-primary-content gap-2 inline-flex items-center font-medium"
+                        className="font-mono text-xs py-1 px-2 rounded-lg bg-secondary/50 hover:bg-secondary border border-neutral-600 text-primary-content gap-2 inline-flex items-center font-medium"
                         key={`${project.fullname}-${lang}`}
                       >
                         <LangIcon lang={lang} />

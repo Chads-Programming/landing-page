@@ -12,7 +12,10 @@ export async function getOrganizationRepositories(): Promise<Repository[]> {
       .filter((repo: RawRepository) => repo.stargazers_count)
       .map(async (repo: RawRepository) => {
         const langResponse = await fetch(repo.languages_url)
-        const langs = await langResponse.json().then(Object.keys)
+
+        const langs = await langResponse.json().then((langsObj) => {
+          return Object.keys(langsObj)
+        })
 
         return {
           name: repo.name,
