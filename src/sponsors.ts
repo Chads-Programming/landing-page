@@ -1,8 +1,8 @@
 export default [
   {
-    name: 'Marchudev',
-    imageUrl: '/marchu-dev.webp',
-    url: 'https://www.marcialfantini.site/',
+    name: 'Rizomma',
+    imageUrl: '/rizomma.webp',
+    url: 'https://rizomma.site/',
   },
   {
     name: 'React universal labs',

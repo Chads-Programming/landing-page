@@ -24,16 +24,12 @@ interface Props {
 
 export const LangIcon = ({ lang }: Props) => {
   const langKey = lang.toUpperCase()
-  const defaultIcon = () => (
-    <span className="font-semibold border border-border/10 p-2 rounded-md">
-      {langKey}
-    </span>
-  )
 
-  const LangComponent =
-    langKey in LANG_ICON_MAP
-      ? LANG_ICON_MAP[langKey as keyof typeof LANG_ICON_MAP]
-      : defaultIcon
+  if (!(langKey in LANG_ICON_MAP)) {
+    return null
+  }
 
-  return <LangComponent className="w-7 h-7" />
+  const LangComponent = LANG_ICON_MAP[langKey as keyof typeof LANG_ICON_MAP]
+
+  return <LangComponent className="w-4 h-4" />
 }

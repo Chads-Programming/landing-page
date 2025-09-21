@@ -1,15 +1,12 @@
-import { MembersMosaic } from '@/components/members-mosaic'
 import { LinkButton } from '@/components/ui/link-button'
 import { RetroGrid } from '@/components/ui/retro-grid'
 import { TextAnimatedGradient } from '@/components/ui/text-animated'
 import { Discord } from '@/icons/discord'
-import { Github } from '@/icons/github'
-import { YouTube } from '@/icons/youtube'
 import Image from 'next/image'
 
 export const HeroSection = () => {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl">
       <div className="container w-full px-4 mx-auto relative z-20 flex flex-wrap md:flex-nowrap justify-center items-center">
         <div className="flex flex-col items-center justify-center min-h-screen">
           <Image
@@ -35,28 +32,14 @@ export const HeroSection = () => {
               <LinkButton url="https://discord.gg/FSKeeDhMNN">
                 <Discord className="w-6 h-6" /> Join Discord
               </LinkButton>
-
-              <LinkButton
-                url="https://github.com/Chads-Programming"
-                color="dark"
-                reverse
-              >
-                <Github className="w-6 h-6" /> Github
-              </LinkButton>
-
-              <LinkButton
-                url="https://www.youtube.com/@ChadsProgramming"
-                color="dark"
-                reverse
-              >
-                <YouTube className="w-6 h-6" /> Youtube
-              </LinkButton>
             </div>
           </div>
         </div>
-        <MembersMosaic />
+        {/* <MembersMosaic /> */}
       </div>
-      <RetroGrid />
+      <div className="absolute w-full h-full">
+        <RetroGrid />
+      </div>
     </div>
   )
 }

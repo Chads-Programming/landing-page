@@ -1,15 +1,20 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import localFont from 'next/font/local'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const atkinson = localFont({
+  src: [
+    {
+      path: '../../public/fonts/atkinson-regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/atkinson-bold.woff',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
 })
 
 const title = 'Chads programming'
@@ -48,9 +53,7 @@ export default function RootLayout({
           sizes="32x32"
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
-      >
+      <body className={`font-sans ${atkinson.className} antialiased bg-black`}>
         {children}
       </body>
     </html>
