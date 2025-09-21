@@ -5,7 +5,6 @@ import { AnimatedHeading } from '@/components/ui/animated-heading'
 import { LangIcon } from '@/components/ui/lang-icon'
 import { SpotlightCard } from '@/components/ui/spotlight-card'
 import { getOrganizationRepositories } from '@/server/github/get-org-repository'
-import { Star } from 'lucide-react'
 import Link from 'next/link'
 
 const MIN_STARS = 3
@@ -25,7 +24,7 @@ export const ProjectsSection = async () => {
 
   return (
     <section className="py-20 relative overflow-hidden bg-transparent">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#11111b] to-black opacity-90" />
+      <div className="absolute inset-0 bg-background" />
       <div className="container px-4 mx-auto relative z-20">
         <AnimatedHeading
           title="Featured Projects"
@@ -42,19 +41,23 @@ export const ProjectsSection = async () => {
                   <p className="text-zinc-400 mb-4">{project.description}</p>
                   <div className="text-sm text-zinc-500 inline-flex flex-wrap gap-2 items-center">
                     {project.languages.map((lang) => (
-                      <div className="px-2" key={`${project.fullname}-${lang}`}>
+                      <div
+                        className="font-mono text-xs py-1 px-2 rounded-lg bg-secondary/50 hover:bg-secondary border border-gray-600 text-primary-content gap-2 inline-flex items-center font-medium"
+                        key={`${project.fullname}-${lang}`}
+                      >
                         <LangIcon lang={lang} />
+                        <span>{lang}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-center gap-4 mt-4 pt-4 border-t border-zinc-800">
+                  {/* <div className="flex items-center gap-4 mt-4 pt-4 border-t border-zinc-800">
                     <div className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-500" />
                       <span className="text-zinc-400">
                         {project.stargazersCount}
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                 </SpotlightCard>
               </Link>
             </AnimateInView>

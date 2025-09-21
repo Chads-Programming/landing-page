@@ -7,8 +7,8 @@ import Link from 'next/link'
 
 export const Sponsorsection = () => {
   return (
-    <section className="py-20 relative border-t border-zinc-800 bg-transparent">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#11111b] to-black opacity-90" />
+    <section className="py-20 relative border-t border-zinc-800">
+      <div className="absolute inset-0 bg-background" />
       <div className="container px-4 mx-auto relative z-20">
         <AnimateInView>
           <SectionHeading
@@ -27,9 +27,9 @@ export const Sponsorsection = () => {
                     alt={sponsor.name}
                     width={64}
                     height={65}
-                    className="opacity-50 rounded-full group-hover:grayscale-0 group-hover:opacity-100 transition-opacity grayscale"
+                    className="opacity-50 rounded-full group-hover:grayscale-0 group-hover:opacity-100 transition-opacity grayscale bg-white"
                   />
-                  <span className="text-pretty ml-2 text-sm font-semibold text-white">
+                  <span className="text-pretty ml-2 text-mono font-semibold text-white">
                     {sponsor.name}
                   </span>
                 </div>

@@ -9,8 +9,7 @@ export default [
     text: 'This community has been instrumental in my growth as a developer. The support and knowledge sharing is incredible.',
     author: 'Arturo Artaza',
     role: 'Full stack developer',
-    image:
-      'https://media.licdn.com/dms/image/v2/D4D03AQHYugQuEeCt1g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1724083002388?e=1743638400&v=beta&t=f1KothKGMKM1CLWHel016ovDOmkGCdzAXyD0yFYdVhU',
+    image: 'https://avatars.githubusercontent.com/u/71021164?v=4',
   },
   {
     text: `Joining to this community, I have connected with amazing friends who guided me, helped improve my projects, and made me a better programmer. I wouldn't be where I am without them!`,
