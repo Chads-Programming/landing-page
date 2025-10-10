@@ -21,6 +21,7 @@ export interface DiscordUser {
   accent_color: number
   premium_type: number
   public_flags: number
+  global_name: string | null
   avatar_decoration_data: {
     sku_id: string
     asset: string

@@ -10,8 +10,8 @@ export default function DiscordLanding() {
     <div className="min-h-screen bg-gradient-to-b from-black via-[#0A0B1E] to-black">
       <HeroSection />
       <CommunitySection />
-      <ProjectsSection />
       <ColaboratorsSection />
+      <ProjectsSection />
       <TestimonialsSection />
       <Sponsorsection />
     </div>

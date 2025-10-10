@@ -42,7 +42,7 @@ export const ProjectsSection = async () => {
                   <div className="text-sm text-zinc-500 inline-flex flex-wrap gap-2 items-center">
                     {project.languages.map((lang) => (
                       <div
-                        className="font-mono text-xs py-1 px-2 rounded-lg bg-secondary/50 hover:bg-secondary border border-neutral-600 text-primary-content gap-2 inline-flex items-center font-medium"
+                        className="font-mono text-white text-xs py-1 px-2 rounded-lg bg-neutral-700/50 hover:bg-secondary border border-neutral-700 text-primary-content gap-2 inline-flex items-center font-medium"
                         key={`${project.fullname}-${lang}`}
                       >
                         <LangIcon lang={lang} />
@@ -50,14 +50,6 @@ export const ProjectsSection = async () => {
                       </div>
                     ))}
                   </div>
-                  {/* <div className="flex items-center gap-4 mt-4 pt-4 border-t border-zinc-800">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-500" />
-                      <span className="text-zinc-400">
-                        {project.stargazersCount}
-                      </span>
-                    </div>
-                  </div> */}
                 </SpotlightCard>
               </Link>
             </AnimateInView>
