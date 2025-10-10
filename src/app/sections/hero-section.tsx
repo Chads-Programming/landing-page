@@ -35,7 +35,6 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-        {/* <MembersMosaic /> */}
       </div>
       <div className="absolute w-full h-full">
         <RetroGrid />

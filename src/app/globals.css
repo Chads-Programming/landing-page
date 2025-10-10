@@ -62,6 +62,10 @@ body {
   }
 }
 
+.colaborator-item {
+  flex: 0 0 calc(18.66% - 20px);
+}
+
 @layer base {
   * {
     @apply border-border;

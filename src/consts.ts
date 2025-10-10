@@ -1,5 +1,6 @@
 export const GITHUB_ORG_NAME = 'Chads-Programming'
 export const GIGA_CHAD_ROLE = '1244177447210057770'
 export const CONSPIRADOR_ROLE = '1250304719457615893'
+export const ULTRA_CHAD_ROLE = '1318814719645188119'
 export const GUILD_ID = '1242262189985763468'
 export const DISCORD_BASE_IMAGE_URL = 'https://cdn.discordapp.com/'

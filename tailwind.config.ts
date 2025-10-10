@@ -14,7 +14,7 @@ export default {
         'background-shine': 'background-shine 2s linear infinite',
         'text-gradient': 'text-gradient 1.5s linear infinite',
         orbit: 'orbit calc(var(--duration)*1s) linear infinite',
-        grid: 'grid 15s linear infinite',
+        grid: 'grid 30s linear infinite',
       },
       keyframes: {
         grid: {
