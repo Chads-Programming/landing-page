@@ -2,7 +2,7 @@
 
 import { AnimateInView } from '@/components/ui/animate-in-view'
 import { AnimatedHeading } from '@/components/ui/animated-heading'
-import { filterUltraChadMembers } from '@/server/discord/filters'
+import { filterHallOfFameMembers } from '@/server/discord/filters'
 import { getServerMembers } from '@/server/discord/get-server-members'
 import { getMemberAvatarUrl } from '@/server/discord/helpers'
 import type { DiscordUser } from '@/server/discord/types'
@@ -19,7 +19,7 @@ const alphabeticalSort = (
 
 export const ColaboratorsSection = async () => {
   const members = await getServerMembers({ limit: MAX_LIMIT })
-    .then(filterUltraChadMembers)
+    .then(filterHallOfFameMembers)
     .then((members) => members.sort(alphabeticalSort))
 
   return (
