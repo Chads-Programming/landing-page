@@ -23,7 +23,6 @@ const create = ({ baseURL, headers = {} }: Options) => {
         ...headers,
         ...methodHeaders,
       },
-      cache: 'force-cache',
     })
 
     const data = await res.json()
