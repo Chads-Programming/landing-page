@@ -1,7 +1,7 @@
 import type { SVGProps } from 'react'
 
 export const Rust = (props: SVGProps<SVGSVGElement>) => (
-  // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
+  // biome-ignore lint/a11y/noSvgWithoutTitle: just icon
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"

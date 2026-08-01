@@ -37,6 +37,7 @@ export const SpotlightCard: React.FC<PropsWithChildren> = ({ children }) => {
   }
 
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: decorative spotlight effect, exposes no action
     <div
       ref={divRef}
       onMouseMove={handleMouseMove}

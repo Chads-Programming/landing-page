@@ -1,11 +1,11 @@
 'use server'
 
+import Link from 'next/link'
 import { AnimateInView } from '@/components/ui/animate-in-view'
 import { AnimatedHeading } from '@/components/ui/animated-heading'
 import { LangIcon } from '@/components/ui/lang-icon'
 import { SpotlightCard } from '@/components/ui/spotlight-card'
 import { getOrganizationRepositories } from '@/server/github/get-org-repository'
-import Link from 'next/link'
 
 const MIN_STARS = 3
 

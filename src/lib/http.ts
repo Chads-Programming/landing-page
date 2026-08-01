@@ -9,7 +9,7 @@ interface MethodOptions {
 }
 
 const create = ({ baseURL, headers = {} }: Options) => {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  // biome-ignore lint/suspicious/noExplicitAny: default for the caller-provided response type
   const getMethod = async <T = any>(
     path: string,
     options?: MethodOptions,

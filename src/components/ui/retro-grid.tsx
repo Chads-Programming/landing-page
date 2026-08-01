@@ -53,8 +53,7 @@ export function RetroGrid({
     <div
       className={cn(
         'pointer-events-none absolute size-full overflow-hidden [perspective:200px]',
-        // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
-        `opacity-[var(--opacity)]`,
+        'opacity-[var(--opacity)]',
         className,
       )}
       style={gridStyles}

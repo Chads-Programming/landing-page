@@ -27,7 +27,7 @@ const filterHallOfFameMembers = (members: DiscordMember[]) => {
 }
 
 export {
+  filterHallOfFameMembers,
   filterOnlyGigachadMembers,
   filterUltraChadMembers,
-  filterHallOfFameMembers,
 }

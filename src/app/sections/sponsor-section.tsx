@@ -1,9 +1,8 @@
 import Image from 'next/image'
-
+import Link from 'next/link'
 import { AnimateInView } from '@/components/ui/animate-in-view'
 import { SectionHeading } from '@/components/ui/section-heading'
 import sponsors from '@/sponsors'
-import Link from 'next/link'
 
 export const Sponsorsection = () => {
   return (

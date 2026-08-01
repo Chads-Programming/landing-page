@@ -1,8 +1,8 @@
+import Image from 'next/image'
 import { LinkButton } from '@/components/ui/link-button'
 import { RetroGrid } from '@/components/ui/retro-grid'
 import { TextAnimatedGradient } from '@/components/ui/text-animated'
 import { Discord } from '@/icons/discord'
-import Image from 'next/image'
 
 export const HeroSection = () => {
   return (

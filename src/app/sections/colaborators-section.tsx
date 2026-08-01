@@ -1,12 +1,12 @@
 'use server'
 
+import Image from 'next/image'
 import { AnimateInView } from '@/components/ui/animate-in-view'
 import { AnimatedHeading } from '@/components/ui/animated-heading'
 import { filterHallOfFameMembers } from '@/server/discord/filters'
 import { getServerMembers } from '@/server/discord/get-server-members'
 import { getMemberAvatarUrl } from '@/server/discord/helpers'
 import type { DiscordUser } from '@/server/discord/types'
-import Image from 'next/image'
 
 const MAX_LIMIT = 500
 

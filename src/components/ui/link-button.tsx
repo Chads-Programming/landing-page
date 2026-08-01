@@ -22,8 +22,10 @@ export const LinkButton = ({
 }: Props) => {
   return (
     <Link href={url} target="_blank" className="group">
-      {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-      <button className="text-lg relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50">
+      <button
+        type="button"
+        className="text-lg relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
+      >
         <span
           className={`absolute inset-[-1000%] ${reverse ? 'animate-[reverse_spin_2s_linear_infinite]' : 'animate-[spin_2s_linear_infinite]'} ${colorMap[color]}`}
         />

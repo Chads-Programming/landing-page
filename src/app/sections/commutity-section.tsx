@@ -1,8 +1,8 @@
+import { PlayIcon } from 'lucide-react'
+import Link from 'next/link'
 import { MembersMosaic } from '@/components/members-mosaic'
 import { AnimateInView } from '@/components/ui/animate-in-view'
 import { Github } from '@/icons/github'
-import { PlayIcon } from 'lucide-react'
-import Link from 'next/link'
 
 export const CommunitySection = () => {
   return (

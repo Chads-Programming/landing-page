@@ -1,7 +1,7 @@
 import type { SVGProps } from 'react'
 
 export const Github = (props: SVGProps<SVGSVGElement>) => (
-  // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
+  // biome-ignore lint/a11y/noSvgWithoutTitle: just icon
   <svg
     viewBox="0 0 24 24"
     width="1em"

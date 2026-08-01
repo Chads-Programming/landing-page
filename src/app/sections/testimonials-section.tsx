@@ -1,10 +1,10 @@
 'use server'
+import { MessageSquare } from 'lucide-react'
+import Image from 'next/image'
 import { AnimateInView } from '@/components/ui/animate-in-view'
 import { SectionHeading } from '@/components/ui/section-heading'
 import { SpotlightCard } from '@/components/ui/spotlight-card'
 import testimonials from '@/testimonials'
-import { MessageSquare } from 'lucide-react'
-import Image from 'next/image'
 
 export const TestimonialsSection = async () => {
   return (
